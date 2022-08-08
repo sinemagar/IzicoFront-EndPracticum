@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Instagram</title>
+</head>
+
+<body class=" bd-example">
+
+
+    <!--NAVBAR START-->
+
+    <nav class="navbar navbar-expand-lg bg-light margin-top:2px position-relative">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img width="140px"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png?20160616034027"
+                    alt="Instagram_logo">
+            </a>
+
+            <form class="d-flex position-absolute top-50 start-50 translate-middle">
+                <input class="form-control mp-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img width="35px" src="https://icon-library.com/images/home-icon-png/home-icon-png-20.jpg"
+                            alt="">
+                    </a>
+
+                    <a class="nav-link" href="#">
+                        <img width="35px" src="https://cdn-icons-png.flaticon.com/512/4406/4406266.png" alt="">
+                    </a>
+                    <a class="nav-link" href="#">
+                        <img width="45px"
+                            src="data:image/png;base64,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"
+                            alt="discover">
+                    </a>
+                    <a class="nav-link" href="#">
+                        <img width="35px" src="img/profil.png" class="rounded-circle" alt="Cinque Terre">
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--NAVBAR END-->
+    <!--Container end-->
+
+    <!--İlk bölme-->
+    <div class="row mt-5 ml-5">
+        <!--8 - 4 böldük-->
+        <div class="col-sm-7">
+
+            <!--HAREKETLİ Story KISMI-->
+            <div class="row mt-3 ml-1 bg-light rounded-lg ">
+                <!--HAREKETLİ Story 1-->
+                <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="img/profil.png" class="rounded-circle " alt="Cinque Terre">
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">sinemagar</p>
+                </div>
+                
+                 <!--HAREKETLİ Story 2-->
+                <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="https://i.pinimg.com/236x/6d/00/a5/6d00a577eb6e68f267449ff6cd29bfff.jpg" class="rounded-circle " alt="Cinque Terre">
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">menekseyaz</p>
+                </div>
+                 <!--HAREKETLİ Story 3-->
+                <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="https://i4.hurimg.com/i/hurriyet/75/750x0/5d793e8745d2a023a0dd18aa.jpg" class="rounded-circle " alt="Cinque Terre">
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">pintipanda</p>
+                </div>
+                 <!--HAREKETLİ Story 4-->
+                <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="https://boxerdergisi.com.tr/content/images/photogallery/size1/bir-erkegin-instagram-hesabi-nasil-olmali-47074-22032018144802.jpg" class="rounded-circle  " alt="Cinque Terre">
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">sekerlimon</p>
+                </div>
+                 <!--HAREKETLİ Story 5-->
+                <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="https://1.bp.blogspot.com/-igFAxsAaKIw/YEvwi5TUSjI/AAAAAAAAFPY/FgpqZIn1YngYjL8fgQlXYy2ysOA7P2LUwCNcBGAsYHQ/s724/poz4.jpg" class="rounded-circle " alt="Cinque Terre">
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">serikozgetir</p>
+                </div>
+                 <!--HAREKETLİ Story 6-->
+                
+                 <div class="col-sm-2">
+                    <a class="nav-link" href="#">
+                        <img width="80px" src="http://mdcdn.sporx.com/img/2018/02/201519139929.jpg" class="rounded-circle " alt="story1">
+
+                    </a>
+                    <p class="fw-lighter ml-3 text-black ">laledevri</p>
+                </div>
+            </div>
+
+
+
+
+            <!--HAREKETLİ POST KISMI-->
+            <!--1-->
+            <div class="card mt-4 rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title"><!--kullanıcı resmi-->
+                        <img width="50px" src="https://i.pinimg.com/236x/6d/00/a5/6d00a577eb6e68f267449ff6cd29bfff.jpg" class="rounded-circle " alt="Cinque Terre">
+                        menekseyaz
+                    </h5>
+                </div>
+                <!--Post fotografi-->
+                <img src="https://img-s1.onedio.com/id-60e435f03a5191df5dc5fcdb/rev-0/w-620/f-jpg/s-cb96f6542e03bca09a5d6f89334458e57aa6f832.jpg" class="card-img-bottom rounded-lg" alt="...">
+                <div class="card-header  border rounded-lg">
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container">
+                          
+                        
+                          <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav"><!--Post iconları-->
+                              <li class="nav-item">
+                              
+                                    <img width="35px"  src="https://icons.veryicon.com/png/o/miscellaneous/ui-basic-linear-icon/like-106.png" alt="like">
+                                
+                              </li>
+                              <li class="nav-item">
+                               
+                                    <img width="30px" class="ml-4 mt-1" src="https://cdn2.iconfinder.com/data/icons/instagram-17/32/9-verifiy-512.png" alt="command">
+                                
+                              </li>
+                              <li class="nav-item">
+                               
+                                    <img width="33px" class="ml-4" src="https://toppng.com/uploads/preview/share-png-file-share-icon-free-download-1156313309811bbndeiii.png" alt="share">
+                                
+                              </li>
+                              
+                            </ul>
+                            
+                            
+                          </div>
+                          <p class=" nav-item text-end ">
+                           
+                                <img width="33px" class="mt-1" src="https://cdn3.iconfinder.com/data/icons/instagram-18/512/196_Flag_Instagram_Interface_Save_Tag-512.png" alt="share">
+                            
+
+                          </p>
+                        </div>
+                      </nav>
+                    
+                </div>
+                <div class="card-body text rounded-lg">
+                    <h5 class="card-title"><!--post mini resim beğeni sayısı-->
+                        <img width="30px" src="https://i.pinimg.com/236x/6d/00/a5/6d00a577eb6e68f267449ff6cd29bfff.jpg" class="rounded-circle " alt="Cinque Terre">
+                        <b> menekseyaz </b> and <b> 45 person</b> liked.
+                    </h5>
+
+                    <h5 class="card-title">
+                        <b> menekseyaz </b> instagram clone
+                        
+                    </h5>
+                    <p class="card-text text-muted">See all 12 Command...</p>
+                    <p class="card-text text-muted fst-italic">1 Day Ago
+                    </p>
+                </div>
+                <div class="card-footer border rounded-lg"><!--card footer-->
+                    <div>
+                        <span class="input-group-text">
+                            <img width="33px" src="https://cdn.iconscout.com/icon/free/png-256/smile-2689437-2232238.png" alt="share">
+                            <input type="text" class="form-control ml-2" id="floatingInputGroup1" placeholder="Command...">
+                          
+                        </span>
+
+                    </div>
+                    
+                </div>
+            </div>
+                 <!--
+
+    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <img width="33px" class="mt-1" src="https://cdn3.iconfinder.com/data/icons/instagram-18/512/196_Flag_Instagram_Interface_Save_Tag-512.png" alt="share">
+
+                        </span>
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                          <label for="floatingInputGroup1">Username</label>
+                        </div>
+                      </div>
+             -->
+<!--2-->
+<div class="card mt-4 rounded-lg">
+    <div class="card-body">
+        <h5 class="card-title">
+            <img width="50px" src="img/profil.png" class="rounded-circle " alt="Cinque Terre">
+            sinemagar
+        </h5>
+    </div>
+    <img  src="img/profil.png" class="card-img-bottom rounded-lg" alt="...">
+    <div class="card-header  border rounded-lg">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+              
+            
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                  
+                        <img width="35px"  src="https://icons.veryicon.com/png/o/miscellaneous/ui-basic-linear-icon/like-106.png" alt="like">
+                    
+                  </li>
+                  <li class="nav-item">
+                   
+                        <img width="30px" class="ml-4 mt-1" src="https://cdn2.iconfinder.com/data/icons/instagram-17/32/9-verifiy-512.png" alt="command">
+                    
+                  </li>
+                  <li class="nav-item">
+                   
+                        <img width="33px" class="ml-4" src="https://toppng.com/uploads/preview/share-png-file-share-icon-free-download-1156313309811bbndeiii.png" alt="share">
+                    
+                  </li>
+                  
+                </ul>
+                
+                
+              </div>
+              <p class=" nav-item text-end ">
+               
+                    <img width="33px" class="mt-1" src="https://cdn3.iconfinder.com/data/icons/instagram-18/512/196_Flag_Instagram_Interface_Save_Tag-512.png" alt="share">
+                
+
+              </p>
+            </div>
+          </nav>
+        
+    </div>
+    <div class="card-body text rounded-lg">
+        <h5 class="card-title">
+            <img width="30px" src="img/profil.png" class="rounded-circle " alt="Cinque Terre">
+            <b> sinemagar </b> and <b> 45 person</b> liked.
+        </h5>
+
+        <h5 class="card-title">
+            <b> sinemagar </b> instagram clone
+            
+        </h5>
+        <p class="card-text text-muted">See all 12 Command...</p>
+        <p class="card-text text-muted fst-italic">1 Day Ago
+        </p>
+    </div>
+    <div class="card-footer border rounded-lg">
+        <div>
+            <span class="input-group-text">
+                <img width="33px" src="https://cdn.iconscout.com/icon/free/png-256/smile-2689437-2232238.png" alt="share">
+                <input type="text" class="form-control ml-2" id="floatingInputGroup1" placeholder="Command...">
+              
+            </span>
+
+        </div>
+        
+    </div>
+</div>
+<!--3-->
+<div class="card mt-4 rounded-lg">
+    <div class="card-body">
+        <h5 class="card-title">
+            <img width="50px" src="https://1.bp.blogspot.com/-igFAxsAaKIw/YEvwi5TUSjI/AAAAAAAAFPY/FgpqZIn1YngYjL8fgQlXYy2ysOA7P2LUwCNcBGAsYHQ/s724/poz4.jpg" class="rounded-circle " alt="Cinque Terre">
+            serikozgetir
+        </h5>
+    </div>
+    <img src="https://1.bp.blogspot.com/-igFAxsAaKIw/YEvwi5TUSjI/AAAAAAAAFPY/FgpqZIn1YngYjL8fgQlXYy2ysOA7P2LUwCNcBGAsYHQ/s724/poz4.jpg" class="card-img-bottom rounded-lg" alt="...">
+    <div class="card-header  border rounded-lg">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+              
+            
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                  
+                        <img width="35px"  src="https://icons.veryicon.com/png/o/miscellaneous/ui-basic-linear-icon/like-106.png" alt="like">
+                    
+                  </li>
+                  <li class="nav-item">
+                   
+                        <img width="30px" class="ml-4 mt-1" src="https://cdn2.iconfinder.com/data/icons/instagram-17/32/9-verifiy-512.png" alt="command">
+                    
+                  </li>
+                  <li class="nav-item">
+                   
+                        <img width="33px" class="ml-4" src="https://toppng.com/uploads/preview/share-png-file-share-icon-free-download-1156313309811bbndeiii.png" alt="share">
+                    
+                  </li>
+                  
+                </ul>
+                
+                
+              </div>
+              <p class=" nav-item text-end ">
+               
+                    <img width="33px" class="mt-1" src="https://cdn3.iconfinder.com/data/icons/instagram-18/512/196_Flag_Instagram_Interface_Save_Tag-512.png" alt="share">
+                
+
+              </p>
+            </div>
+          </nav>
+        
+    </div>
+    <div class="card-body text rounded-lg">
+        <h5 class="card-title">
+            <img width="30px" src="img/profil.png" class="rounded-circle " alt="Cinque Terre">
+            <b> sinemagar </b> and <b> 255 person</b> liked.
+        </h5>
+
+        <h5 class="card-title">
+            <b> sinemagar </b> instagram clone
+            
+        </h5>
+        <p class="card-text text-muted">See all 12 Command...</p>
+        <p class="card-text text-muted fst-italic">5 Day Ago
+        </p>
+    </div>
+    <div class="card-footer border rounded-lg">
+        <div>
+            <span class="input-group-text">
+                <img width="33px" src="https://cdn.iconscout.com/icon/free/png-256/smile-2689437-2232238.png" alt="share">
+                <input type="text" class="form-control ml-2" id="floatingInputGroup1" placeholder="Command...">
+              
+            </span>
+
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+        <!--Sabit kısım-->
+        <div class="col-sm-5 mt-5 d-none d-xl-block "><!--5 lik grid-->
+
+            <div class="card">
+
+                <div class="card-body"> 
+            <div class="row mt-4 card-title ">
+                
+                <div class="col-sm-2 ">
+                    <img width="80px" src="img/profil.png" class="rounded-circle " alt="Cinque Terre">
+                </div>
+                <div class="col-sm-8 ">
+
+                    <br>
+                    <b class="ml-2 fs-5  "><b>sinemagar</b> </b> 
+                </div>
+                    
+            </div>
+  
+
+            <div class="row mt-5 card-title">
+                
+                <div class="col-sm-8">
+                    <h5 class="text-muted">Recommended for you </h5>
+                    <!--Tanıyor olabileceğin kişiler 1 resim-->
+                    <img width="50px" src="https://2.bp.blogspot.com/-IVZ9CZuY_S0/Wl809Z7qkzI/AAAAAAAAZRE/boh6fv17w4oa6UwdASYBjbJQreGfKbi0wCEwYBhgL/s1600/sevgili_ile_fotograf_cektirme_6.jpg" class="rounded-circle " alt="Cinque Terre">
+                   <b> jackjones</b>
+                   <br>
+                   <br>   
+                    <!--Tanıyor olabileceğin kişiler 2 resim-->                 
+                    <img width="50px" src="https://www.oggusto.com/UserFiles/Image/images/mayis2021/fotojenik-insan-yoktur-calisilmis-poz-vardir-fotojenikgorunme5.jpeg" class="rounded-circle " alt="Cinque Terre">
+                   <b> emiliee</b>
+                   <br>
+
+                   <br>    
+                    <!--Tanıyor olabileceğin kişiler 3 resim-->                
+                    <img width="50px" src="https://i.pinimg.com/originals/6f/b3/c1/6fb3c1e9e8a1ed39ccc32fa6a3412092.jpg" class="rounded-circle " alt="Cinque Terre">
+                   <b> sarahbil</b>
+                   <br>
+                   <br>      
+                    <!--Tanıyor olabileceğin kişiler 4 resim-->              
+                   <img width="50px" src="https://pembeteknoloji.com.tr/wp-content/uploads/2020/10/instagram-fotograflari-icin-poz-onerileri-1.jpg" class="rounded-circle " alt="Cinque Terre">
+                  <b> heiylebieber</b>
+                  <br>
+                  <br>      
+                   <!--Tanıyor olabileceğin kişiler 5 resim-->              
+                   <img width="50px" src="https://i3.posta.com.tr/i/posta/75//750x0/616fb64f45d2a0b254038019" class="rounded-circle " alt="Cinque Terre">
+                  <b> richeardbor</b>
+                  <br>
+
+                </div>
+                <div class="col-sm-4">
+                  <b> <h5 class="text-dark">See all </h5></b> 
+                  <br>
+                   <!--Tanıyor olabileceğin kişiler 1 fallow-->
+                  <b class="text-info"> Follow </b>
+                  <br>
+                  <br>
+                  <br>
+                   <!--Tanıyor olabileceğin kişiler 2 fallow-->
+                  <b class="text-info"> Follow </b>
+                  <br>
+                 
+                  <br><br>
+                   <!--Tanıyor olabileceğin kişiler 3 fallow-->
+                  <b class="text-info"> Follow </b>
+                  <br>
+                  
+                  <br><br>
+                   <!--Tanıyor olabileceğin kişiler 4 fallow-->
+                  <b class="text-info"> Follow </b>
+                  <br>
+                  <br><br>
+                   <!--Tanıyor olabileceğin kişiler 5 fallow-->
+                  <b class="text-info"> Follow </b>
+                  <br>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer bg-transparent">
+            
+            <p class="fs-6 fw-lighter">
+                
+                About-Help-Press-API-Jobs-Privacy-Terms-Locations-Language
+            </p>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <!--Container End-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
