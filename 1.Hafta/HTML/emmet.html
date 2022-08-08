@@ -1,0 +1,84 @@
+<!--ul>li*3-->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+<!-- 
+    . ->class özelliği
+    ul.class1>li.class2 -->
+<ul class="class1">
+    <li class="class2"></li>
+</ul>
+
+
+<!--
+    #id özelliğini eklemek için
+
+     ul#id1>li#id2
+-->
+<ul id="id1">
+    <li id="id2"></li>
+</ul>
+
+<!--
+Örneğin ul tagının içine aynı id’ye sahip 3 adet li eklemek istiyorsam 
+* ifadesi kullanılabilir.
+
+Fakat amacım farklı id’lere sahip 
+üç adet li tagı oluşturmaksa ul>li#id1+li#id2+li#id3
+ yapılır.
+
+-->
+<ul>
+    <li id="id1"></li>
+    <li id="id2"></li>
+    <li id="id3"></li>
+</ul>
+<!--
+Emmet bunun için de bir kısa yola sahip :$ ifadesi. 
+Yani yukarda görmüş olduğunuz 
+ul>li#id1+li#id2+li#id3
+ şeklinde yazdığımız kod bloğunu
+çok daha basit bir biçimde
+ ul>li#idNo$*3 diyerek yazabiliriz.
+
+-->
+<ul>
+    <li id="idNo1"></li>
+    <li id="idNo2"></li>
+    <li id="idNo3"></li>
+</ul>
+<!--
+Textlerimizi {} ifadesinin içine yazmamız yeterli:
+p{Emmet ile tag içine text yazma}
+
+-->
+<p>Emmet ile tag içine text yazma</p>
+<!--p>lorem-->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod recusandae dolor itaque deleniti laboriosam facilis repellendus iusto. Dolor laudantium odit magnam dignissimos ratione nisi, accusantium ipsa officiis earum qui quisquam.</p>
+<!--p>lorem5-->
+<p>Lorem ipsum dolor sit amet.</p>
+<!--
+
+    .className
+    ul>.className
+-->
+<div class="className"></div>
+<ul>
+    <li class="className"></li>
+</ul>
+
+<div>
+    <p id="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, delectus.</p>
+    <p id="item">Dolore sequi voluptate iure tenetur sapiente quod ipsam rerum cum?</p>
+    <p id="item">Eveniet minus quis reprehenderit minima illum perferendis at recusandae maiores.</p>
+    <p id="item">Sint reprehenderit, aliquam error pariatur sed sapiente veritatis enim possimus?</p>
+    <p id="item">Itaque sunt commodi accusamus sint inventore, repellendus hic assumenda laudantium?</p>
+    <p id="item">Dignissimos laboriosam et hic quae eaque corrupti dolore totam aliquid!</p>
+</div>
+
+
+

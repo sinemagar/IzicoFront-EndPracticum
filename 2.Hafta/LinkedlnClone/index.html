@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@1&family=Nanum+Gothic:wght@800&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/linedin.css">
+    <title>LinkedIn</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="border-bottom-dark py-1">
+
+
+        <div class="container">
+            <!--CONTAINER START-->
+            <!--NAVBAR START-->
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img width="40px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="">
+                    </a>
+                    <!--Search button-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <form class="d-flex ml-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item ml-3">
+                                <!--home-->
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <img width="30px"
+                                        src="data:image/png;base64,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"
+                                        alt="home">
+
+                                </a>
+                                Home
+                            </li>
+                            <!--person-->
+                            <li class="nav-item ml-3 ">
+                                <a class="nav-link " href="#">
+                                    <img width="30px"
+                                        src="https://toppng.com/uploads/preview/ost-navigation-people-icon-grey-11563250547z5nvtwig34.png"
+                                        alt="person">
+
+                                </a>
+                                Network
+                            </li>
+                            <!--job-->
+                            <li class="nav-item ml-3">
+                                <a class="nav-link" href="#">
+                                    <img width="30px"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVrCykSlcosvThUSwS28vEjSnBDcH3oGK8L7GnTyneyzkS9ZIxpYpJChiRJLxD6nNgF2w&usqp=CAU"
+                                        alt="job">
+
+                                </a>
+                                Buisness
+                            </li>
+                            <li class="nav-item ml-3 ">
+                                <a class="nav-link " href="#">
+                                    <img width="30px"
+                                        src="https://cdn2.iconfinder.com/data/icons/gaming-and-beyond-part-2-1/80/Message_gray-512.png"
+                                        alt="msg">
+
+                                </a>
+                                Message
+                            </li>
+                            <!--profile dropdown-->
+                            <li class="nav-item dropdown ml-3">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img class="rounded-circle" width="30px" src="https://i.hizliresim.com/oyl21oz.png"
+                                        alt="home">
+                                </a>
+                                Profile
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://github.com/sinemagar" target="_blank">
+                                            <img class="rounded-circle" width="35px"
+                                                src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                                                alt="home">
+                                            <strong> Github</strong>
+                                        </a></li>
+                                    <!--
+                                        https://i.hizliresim.com/oyl21oz.png -my profile
+                                    -->
+                                    <li>
+                                        <a class="dropdown-item" href="https://www.linkedin.com/in/sinemagar/"
+                                            target="_blank">
+                                            <img class="rounded-circle" width="35px"
+                                                src="https://seeklogo.com/images/L/linkedin-black-icon-logo-ECC426C572-seeklogo.com.png"
+                                                alt="linkedin">
+
+                                            LinkedIn</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="https://medium.com/@sinemagar" target="_blank">
+
+                                            <img class="rounded-circle" width="35px"
+                                                src="   https://miro.medium.com/max/1400/1*psYl0y9DUzZWtHzFJLIvTw.png"
+                                                alt="medium">
+
+                                            Medium</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <div class="d-flex" style="height: 70px;">
+                                    <div class="vr"></div>
+                                </div>
+                            </li>
+                            <li class="nav-item ml-3 ">
+                                <a class="nav-link " href="#">
+                                    <img width="30px"
+                                        src="https://cdn3.iconfinder.com/data/icons/faticons/32/grid-2-01-512.png"
+                                        alt="grid">
+
+                                </a>
+                                Work
+                            </li>
+                            <li class="nav-item d-block d-sm-none bg-success mt-2">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </form>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!--NAVBAR END-->
+        </div>
+        <!--CONTAINER END-->
+    </div>
+
+    <div class="divcolor">
+        <!--CONTAINER START-->
+        <div class="container">
+            <div class="row">
+                <!--sabit sol-->
+                <div class="col-sm-2 mt-3 ">
+                    <!--https://i.hizliresim.com/oyl21oz.png -->
+                    <div class="card">
+                        <div class="card-header" style="
+                     background-image: url(https://media-exp1.licdn.com/dms/image/C4D16AQFN3mTfoxhK_w/profile-displaybackgroundimage-shrink_200_800/0/1631731627976?e=1660176000&v=beta&t=Zh68kk79uzxnW9y-52VNVQJaFncKLSKrOlI2Npx8Wcc);
+                     height: 53px;
+                   ">
+                            <center>
+                                <img src="https://i.hizliresim.com/oyl21oz.png" class="rounded-circle" style="
+                       width: 70px;
+                       height: 70px;
+                     " />
+                            </center>
+                        </div>
+
+
+                        <div class="card-body mt-3">
+                            <center>
+                                <a href="https://www.linkedin.com/in/sinemagar/">
+                                    <h5 class="card-title text-dark">Elif Sinem AGAR</h5>
+                                </a>
+                                <h6 class="text-muted">Software Developer</h6>
+                            </center>
+                            <hr>
+                            <div class="row ">
+                                <div class="col ">
+                                    <h6 class="text-muted">
+                                        <small>The person viewed your profile</small>
+                                    </h6>
+
+                                    <h6 class="text-muted">
+                                        <small>Impressions for your posts</small>
+                                    </h6>
+                                </div>
+                                <div class="col ml-3">
+
+                                    <h6 class="text-primary">
+                                        <small>
+                                            476
+                                        </small>
+                                    </h6>
+                                    <br><br>
+                                    <h6 class="text-primary mt-2">
+                                        <small>
+                                            5.664
+                                        </small>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+
+                                <h6 class="text-muted">
+                                    <img width="15px" class="mr-2"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqUBhowFQ4Fidg0Z8JkbkEKBybFTPYB7g8uRUSzKmQr1tKN3P938mAvZZ6U_f4vrGiiBU&usqp=CAU"
+                                        alt="">
+                                    <small>
+
+                                        Let's Premium
+                                    </small>
+                                </h6>
+
+                            </li>
+                            <li class="list-group-item">
+
+                                <h6 class="text-muted">
+                                    <img width="17px" class="mr-2"
+                                        src="https://www.pngall.com/wp-content/uploads/12/Save-Bookmark.png" alt="">
+                                    <small>
+
+                                        Let's Premium
+                                    </small>
+                                </h6>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                            <h6 class="text-muted mt-2 ml-2">Best New!</h6>
+                            <div>
+                                <ul class="me-5" style="list-style-type:none ;">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                            data-supported-dps="16x16" fill="currentColor" class="mercado-match"
+                                            width="16" height="16" focusable="false">
+                                            <path
+                                                d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z">
+                                            </path>
+
+                                        </svg>
+                                        <small class="text-muted">WE'Boost...</small>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                            data-supported-dps="16x16" fill="currentColor" class="mercado-match"
+                                            width="16" height="16" focusable="false">
+                                            <path
+                                                d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z">
+                                            </path>
+                                        </svg>
+                                        <small class="text-muted">kariyer.net...</small>
+
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                            data-supported-dps="16x16" fill="currentColor" class="mercado-match"
+                                            width="16" height="16" focusable="false">
+                                            <path
+                                                d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z">
+                                            </path>
+                                        </svg>
+                                        <small class="text-muted">Endurance...</small>
+
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                            data-supported-dps="16x16" fill="currentColor" class="mercado-match"
+                                            width="16" height="16" focusable="false">
+                                            <path
+                                                d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z">
+                                            </path>
+                                        </svg>
+                                        <small class="text-muted">People...</small>
+
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                            data-supported-dps="16x16" fill="currentColor" class="mercado-match"
+                                            width="16" height="16" focusable="false">
+                                            <path
+                                                d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z">
+                                            </path>
+                                        </svg>
+                                        <small class="text-muted">TRAI...</small>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <h6 class=" mt-2 ml-3 text-primary">Groups</h6>
+                            <li class="list-group-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16"
+                                    fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+                                    <path
+                                        d="M8.5 7h-1A1.5 1.5 0 006 8.5V14h4V8.5A1.5 1.5 0 008.5 7zM12.75 8h-.5A1.25 1.25 0 0011 9.25V14h3V9.25A1.25 1.25 0 0012.75 8z">
+                                    </path>
+                                    <circle cx="8" cy="4" r="2"></circle>
+                                    <circle cx="12.5" cy="5.5" r="1.5"></circle>
+                                    <path d="M3.75 8h-.5A1.25 1.25 0 002 9.25V14h3V9.25A1.25 1.25 0 003.75 8z"></path>
+                                    <circle cx="3.5" cy="5.5" r="1.5"></circle>
+                                </svg>
+                                <small class="text-muted">.NET Turkey...</small>
+
+                            </li>
+                            <div class="row ">
+                                <div class="col ml-4 ">
+                                    <h6 class="text-primary">
+                                        Events
+                                    </h6>
+
+
+                                </div>
+                                <div class="col ml-5 ">
+
+                                    <h6 class="text-primary">
+                                        <a href="#">+</a>
+                                    </h6>
+                                </div>
+                            </div>
+
+                        </ul>
+                        <div class="card-footer ">
+                            <a class="text-muted" href="#"> Discover More!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--hareketli orta-->
+                <div class="col-sm-6  ">
+
+                    <!--Post at -->
+                    <div class="card mt-3" >
+                        <div class="card-body">
+                            <article class="row mt-2">
+                                <div class="col-3 ml-3">
+                                    <img class="rounded-circle" width="80px" src="https://i.hizliresim.com/oyl21oz.png" alt="">
+                                </div>
+                                <div class="col-7 mt-2 ">
+                                    <input
+                                  
+                                    type="text"
+                                    class="form-control content rounded-pill form-select-lg"
+                                    placeholder="Let's Post"
+                                  />
+                                </div>
+                            </article>
+                           <center >
+                            <div class="btn-group btn-lg mt-3 " role="group" aria-label="Basic outlined example">
+                                <button type="button" class="btn btn-outline ">
+                                    <li-icon aria-hidden="true" type="image" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                        <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z"></path>
+                                      </svg></li-icon> <strong class="ml-1">Photo</strong>
+                                </button>
+                                <button type="button" class="btn btn-outline">
+                                    <li-icon aria-hidden="true" type="video-icon" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                        <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
+                                      </svg></li-icon><strong class="ml-1">Video</strong>
+                                </button>
+                                <button type="button" class="btn btn-outline">
+                                    <li-icon aria-hidden="true" type="job" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                        <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
+                                      </svg></li-icon><strong class="ml-1">Jobs</strong>
+                                </button>
+                                <button type="button" class="btn btn-outline">
+                                    <li-icon aria-hidden="true" type="content-align-left" size="medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                        <path d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z"></path>
+                                      </svg></li-icon><strong class="ml-1">Write</strong>
+                                </button>
+                              </div>
+                           </center>
+                        
+                        </div>
+                      </div>
+                       <!--posts-->
+            <div>
+                <div class="card mt-3" ><!--sended posts 1-->
+                    <div class="card-body">
+                        <!--profile details-->
+                        <div class="row">
+                            <div class="col-1  ">
+                                <img class="rounded-circle" width="50px" src="https://picsum.photos/id/125/500/500" alt="">
+
+                            </div>
+                            <div class="col-7 ml-4">
+                                <strong>ericasss</strong>
+                                <h6 class="text-muted"><small>585 followers</small></h6>
+                                <h6 class="text-muted"><small>7 hour ago 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+                                        <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zM3 8a5 5 0 011-3l.55.55A1.5 1.5 0 015 6.62v1.07a.75.75 0 00.22.53l.56.56a.75.75 0 00.53.22H7v.69a.75.75 0 00.22.53l.56.56a.75.75 0 01.22.53V13a5 5 0 01-5-5zm6.24 4.83l2-2.46a.75.75 0 00.09-.8l-.58-1.16A.76.76 0 0010 8H7v-.19a.51.51 0 01.28-.45l.38-.19a.74.74 0 01.68 0L9 7.5l.38-.7a1 1 0 00.12-.48v-.85a.78.78 0 01.21-.53l1.07-1.09a5 5 0 01-1.54 9z"></path>
+                                      </svg>
+                                </small></h6>
+                            </div>
+                            <div class="col-2 ml-auto"><strong>...</strong></div>
+                        </div>
+                        <div>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam magni dolorem, reprehenderit aliquid animi in iste quo dolores? Iure sed tenetur libero eligendi ipsum fugit.                        </div>
+
+
+                      </div>
+                   <center>
+                    <img src="https://picsum.photos/id/100/500/500" class="card-img-top  " alt="...">
+                   </center>
+                    <div class="card-body">
+                      
+                        <div class="row">
+                            <div class="col-6">
+                                <h6 class="text-muted"><small>
+                                    185 people liked
+                                </small></h6>
+                            </div>
+                            <div class="col-4 ml-auto">
+                                <h6 class="text-muted"><small>
+                                    2 Command
+                                </small></h6>
+                            </div>
+                        </div>
+                   
+                    </div> <!-- postsbuttons-->
+                   
+                    <center >
+                        <div class="btn-group btn-lg mt-3 " role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline ">
+                                <li-icon aria-hidden="true" type="thumbs-up-outline" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-.72l-.25-.87-.85-.41A1 1 0 015 17l.17-1-.76-.74A1 1 0 014.27 14l.66-1.09-.73-1.1a.49.49 0 01.08-.7.48.48 0 01.34-.11h7.05l-1.31-3.92A7 7 0 0110 4.86V3.75a.77.77 0 01.75-.75.75.75 0 01.71.51L12 5a9 9 0 002.13 3.5l4.5 4.5H19z"></path>
+                                  </svg></li-icon> <strong class="ml-1">Like</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="speech-bubble-icon" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 01-2.84 5.61L12 22v-4H8A7 7 0 018 4h8a7 7 0 017 7zm-2 0a5 5 0 00-5-5H8a5 5 0 000 10h6v2.28L19 15a4.79 4.79 0 002-4z"></path>
+                                  </svg></li-icon><strong class="ml-1">Command</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="share-linkedin" class="artdeco-button__icon" size="medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M23 12l-4.61 7H16l4-6H8a3.92 3.92 0 00-4 3.84V17a4 4 0 00.19 1.24L5.12 21H3l-.73-2.22A6.4 6.4 0 012 16.94 6 6 0 018 11h12l-4-6h2.39z"></path>
+                                  </svg></li-icon><strong class="ml-1">Share</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="send-privately"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+                                  </svg></li-icon><strong class="ml-1">Send</strong>
+                            </button>
+                          </div>
+                       </center>
+                    
+
+                   <div>
+
+                   </div>
+                  </div>
+
+            </div>
+            <div>
+                <div class="card mt-3" ><!--sended posts 2-->
+                    <div class="card-body">
+                        <!--profile details-->
+                        <div class="row">
+                            <div class="col-1  ">
+                                <img class="rounded-circle" width="50px" src="https://picsum.photos/id/58/500/500" alt="">
+
+                            </div>
+                            <div class="col-7 ml-4">
+                                <strong>orangejuise</strong>
+                                <h6 class="text-muted"><small>8.858 followers</small></h6>
+                                <h6 class="text-muted"><small>5 min ago 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+                                        <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zM3 8a5 5 0 011-3l.55.55A1.5 1.5 0 015 6.62v1.07a.75.75 0 00.22.53l.56.56a.75.75 0 00.53.22H7v.69a.75.75 0 00.22.53l.56.56a.75.75 0 01.22.53V13a5 5 0 01-5-5zm6.24 4.83l2-2.46a.75.75 0 00.09-.8l-.58-1.16A.76.76 0 0010 8H7v-.19a.51.51 0 01.28-.45l.38-.19a.74.74 0 01.68 0L9 7.5l.38-.7a1 1 0 00.12-.48v-.85a.78.78 0 01.21-.53l1.07-1.09a5 5 0 01-1.54 9z"></path>
+                                      </svg>
+                                </small></h6>
+                            </div>
+                            <div class="col-2 ml-auto"><strong>...</strong></div>
+                        </div>
+                        <div>
+Enim, tenetur aliquam. Voluptatum voluptatibus labore, distinctio quos ipsa deleniti natus, similique cumque impedit consectetur maxime, earum iusto suscipit vitae. Et, recusandae?
+                        </div>
+
+
+                      </div>
+                   <center>
+                    <img src="https://picsum.photos/id/15/500/500" class="card-img-top  "  alt="...">
+                   </center>
+                    <div class="card-body">
+                      
+                        <div class="row">
+                            <div class="col-7">
+                                <h6 class="text-muted"><small>
+                                    589 people liked
+                                </small></h6>
+                            </div>
+                            <div class="col-3 ml-auto">
+                                <h6 class="text-muted"><small>
+                                    15 Command
+                                </small></h6>
+                            </div>
+                        </div>
+                   
+                    </div> <!-- postsbuttons-->
+                   
+                    <center >
+                        <div class="btn-group btn-lg mt-3 " role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline ">
+                                <li-icon aria-hidden="true" type="thumbs-up-outline" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-.72l-.25-.87-.85-.41A1 1 0 015 17l.17-1-.76-.74A1 1 0 014.27 14l.66-1.09-.73-1.1a.49.49 0 01.08-.7.48.48 0 01.34-.11h7.05l-1.31-3.92A7 7 0 0110 4.86V3.75a.77.77 0 01.75-.75.75.75 0 01.71.51L12 5a9 9 0 002.13 3.5l4.5 4.5H19z"></path>
+                                  </svg></li-icon> <strong class="ml-1">Like</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="speech-bubble-icon" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 01-2.84 5.61L12 22v-4H8A7 7 0 018 4h8a7 7 0 017 7zm-2 0a5 5 0 00-5-5H8a5 5 0 000 10h6v2.28L19 15a4.79 4.79 0 002-4z"></path>
+                                  </svg></li-icon><strong class="ml-1">Command</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="share-linkedin" class="artdeco-button__icon" size="medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M23 12l-4.61 7H16l4-6H8a3.92 3.92 0 00-4 3.84V17a4 4 0 00.19 1.24L5.12 21H3l-.73-2.22A6.4 6.4 0 012 16.94 6 6 0 018 11h12l-4-6h2.39z"></path>
+                                  </svg></li-icon><strong class="ml-1">Share</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="send-privately"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+                                  </svg></li-icon>><strong class="ml-1">Send</strong>
+                            </button>
+                          </div>
+                       </center>
+                    
+
+                   <div>
+
+                   </div>
+                  </div>
+
+            </div>
+            <div>
+                <div class="card mt-3" ><!--sended posts 3-->
+                    <div class="card-body">
+                        <!--profile details-->
+                        <div class="row">
+                            <div class="col-1  ">
+                                <img class="rounded-circle" width="50px" src="https://picsum.photos/id/69/500/500" alt="">
+
+                            </div>
+                            <div class="col-7 ml-4">
+                                <strong>icecofee</strong>
+                                <h6 class="text-muted"><small>985 followers</small></h6>
+                                <h6 class="text-muted"><small>3 hour ago 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+                                        <path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zM3 8a5 5 0 011-3l.55.55A1.5 1.5 0 015 6.62v1.07a.75.75 0 00.22.53l.56.56a.75.75 0 00.53.22H7v.69a.75.75 0 00.22.53l.56.56a.75.75 0 01.22.53V13a5 5 0 01-5-5zm6.24 4.83l2-2.46a.75.75 0 00.09-.8l-.58-1.16A.76.76 0 0010 8H7v-.19a.51.51 0 01.28-.45l.38-.19a.74.74 0 01.68 0L9 7.5l.38-.7a1 1 0 00.12-.48v-.85a.78.78 0 01.21-.53l1.07-1.09a5 5 0 01-1.54 9z"></path>
+                                      </svg>
+                                </small></h6>
+                            </div>
+                            <div class="col-2 ml-auto"><strong>...</strong></div>
+                        </div>
+                        <div>
+                           Asperiores aut nemo error dolores quo corporis nesciunt saepe sequi omnis? Voluptates maxime aliquid debitis molestias aliquam adipisci, tempora ea saepe totam hic cupiditate suscipit veniam dolore dignissimos a aperiam. Mollitia.
+                        </div>
+
+
+                      </div>
+                   <center>
+                    <img src="https://picsum.photos/id/46/500/500" class="card-img-top  " alt="...">
+                   </center>
+                    <div class="card-body">
+                      
+                        <div class="row">
+                            <div class="col-7">
+                                <h6 class="text-muted"><small>
+                                    100 people liked
+                                </small></h6>
+                            </div>
+                            <div class="col-3 ml-auto">
+                                <h6 class="text-muted"><small>
+                                   6 Command
+                                </small></h6>
+                            </div>
+                        </div>
+                   
+                    </div> <!-- postsbuttons-->
+                   
+                    <center >
+                        <div class="btn-group btn-lg mt-3 " role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline ">
+                                <li-icon aria-hidden="true" type="thumbs-up-outline" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M19.46 11l-3.91-3.91a7 7 0 01-1.69-2.74l-.49-1.47A2.76 2.76 0 0010.76 1 2.75 2.75 0 008 3.74v1.12a9.19 9.19 0 00.46 2.85L8.89 9H4.12A2.12 2.12 0 002 11.12a2.16 2.16 0 00.92 1.76A2.11 2.11 0 002 14.62a2.14 2.14 0 001.28 2 2 2 0 00-.28 1 2.12 2.12 0 002 2.12v.14A2.12 2.12 0 007.12 22h7.49a8.08 8.08 0 003.58-.84l.31-.16H21V11zM19 19h-1l-.73.37a6.14 6.14 0 01-2.69.63H7.72a1 1 0 01-1-.72l-.25-.87-.85-.41A1 1 0 015 17l.17-1-.76-.74A1 1 0 014.27 14l.66-1.09-.73-1.1a.49.49 0 01.08-.7.48.48 0 01.34-.11h7.05l-1.31-3.92A7 7 0 0110 4.86V3.75a.77.77 0 01.75-.75.75.75 0 01.71.51L12 5a9 9 0 002.13 3.5l4.5 4.5H19z"></path>
+                                  </svg></li-icon> <strong class="ml-1">Like</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="speech-bubble-icon" class="artdeco-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M7 9h10v1H7zm0 4h7v-1H7zm16-2a6.78 6.78 0 01-2.84 5.61L12 22v-4H8A7 7 0 018 4h8a7 7 0 017 7zm-2 0a5 5 0 00-5-5H8a5 5 0 000 10h6v2.28L19 15a4.79 4.79 0 002-4z"></path>
+                                  </svg></li-icon><strong class="ml-1">Command</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="share-linkedin" class="artdeco-button__icon" size="medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M23 12l-4.61 7H16l4-6H8a3.92 3.92 0 00-4 3.84V17a4 4 0 00.19 1.24L5.12 21H3l-.73-2.22A6.4 6.4 0 012 16.94 6 6 0 018 11h12l-4-6h2.39z"></path>
+                                  </svg></li-icon><strong class="ml-1">Share</strong>
+                            </button>
+                            <button type="button" class="btn btn-outline">
+                                <li-icon aria-hidden="true" type="send-privately"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                                    <path d="M21 3L0 10l7.66 4.26L16 8l-6.26 8.34L14 24l7-21z"></path>
+                                  </svg></li-icon>><strong class="ml-1">Send</strong>
+                            </button>
+                          </div>
+                       </center>
+                    
+
+                   <div>
+
+                   </div>
+                  </div>
+
+            </div>
+
+
+            <!--back to top button-->
+            <center class="mt-5">
+                <a href="#" class="btn btn-outline-secondary btn-lg ">back to top</a>
+               </center>
+
+                </div>
+                <!--sabit sağ-->
+                <div class="col-3 mt-3 d-none d-lg-block">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row ">
+                                <div class="col-8 mt-1">
+                                    <h6 class="text-muted">
+                                        <strong> <small>Add To Your Stream </small></strong>
+                                    </h6>
+                                </div>
+                                <div class="col-3 ml-auto">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                        data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16"
+                                        height="16" focusable="false">
+                                        <path
+                                            d="M12 2H4a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2zm-3 8v2H7.5A1.5 1.5 0 016 10.5a1.56 1.56 0 01.1-.5l1.08-3h2.13l-1.09 3zm0-3.75A1.25 1.25 0 1110.25 5 1.25 1.25 0 019 6.25z">
+                                        </path>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row"><!--add your follow-->
+                            <section class="col">
+                                <article class="row mt-2">
+                                    <div class="col-4 mt-1 ml-3">
+                                        <img width="70px" class="rounded-circle"
+                                            src="https://picsum.photos/id/99/80/80"
+                                            alt="getir">
+                                    </div>
+                                    
+                                    <div class="col-7 ml-auto">
+                                        <h6 class="mt-1"><strong>Getir A.Ş.</strong></h6>
+                                        <h6><a rel="stylesheet"> <small
+                                                    class="text-muted">getir.com</small></h6>
+                                        <button type="button"
+                                            class="btn btn-outline-secondary rounded-pill">Follow</button>
+
+                                    </div>
+                                </article>
+                                <article class="row mt-2">
+                                   <div class="col-4 mt-2 ml-3">
+                                    <img width="70px" class="rounded-circle"
+                                            src="https://picsum.photos/id/109/80/80"
+                                            alt="getir">
+                                   </div>
+                                   <div class="col-7 ml-auto">
+                                    <h6 class="mt-2 text-dark">
+                                        <strong > Getir A.Ş.</strong>
+                                    </h6>
+                                    <h6><small class="text-muted"> getir.com</small></h6>
+                                    <button class="btn btn-outline-secondary rounded-pill" > Follow</button>
+                                   </div>
+                                </article>
+                                <article class="row mt-2">
+                                    <div class="col-4 mt-2 ml-3">
+                                    <img width="70px" class="rounded-circle"
+                                     src="https://picsum.photos/id/75/80/80"
+                                     alt="getir">
+                                    </div>
+                                    <div class="col-7 ml-auto">
+                                     <h6 class="mt-2 text-dark">
+                                         <strong > Getir A.Ş.</strong>
+                                     </h6>
+                                     <h6><small class="text-muted"> getir.com</small></h6>
+                                     <button class="btn btn-outline-secondary rounded-pill" > Follow</button>
+                                    </div>
+                                 </article>
+                            </section>
+                        </div>
+                        
+                        <div class="mt-4 ml-2">
+                           <h6 class="text-muted"><small>View all recommendations 
+                            <img width="20px" src="https://icon-library.com/images/free-icon-arrow/free-icon-arrow-20.jpg" alt="">
+
+                           </small></h6>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3" >
+                        <div class="card-body">
+                            <div class="card-body">
+                                
+                                <div class="row ">
+                                <div class="col-8 mt-1">
+                                    <h6 class="text-muted">
+                                        <strong> <small>Featured content</small></strong>
+                                    </h6>
+                                </div>
+                                <div class="col-3 ml-auto">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                        data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16"
+                                        height="16" focusable="false">
+                                        <path
+                                            d="M12 2H4a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2zm-3 8v2H7.5A1.5 1.5 0 016 10.5a1.56 1.56 0 01.1-.5l1.08-3h2.13l-1.09 3zm0-3.75A1.25 1.25 0 1110.25 5 1.25 1.25 0 019 6.25z">
+                                        </path>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="row"><!--add your follow-->
+                                <section class="col">
+                                    <article class="row mt-2">
+                                        <div class="col-4 mt-1 ">
+                                            <img  src="https://picsum.photos/id/1/80/80" alt="">
+                                        </div>
+                                        
+                                        <div class="col-7">
+                                           <h6>Free project templates</h6>
+                                           <h6 class="text-muted"><small>
+                                            Confluence has hundreds 
+                                           </small></h6>
+                                        </div>
+                                    </article>
+                                    <article class="row mt-2">
+                                        <div class="col-4 mt-1 ">
+                                            <img  src="https://picsum.photos/id/2/80/80" alt="">
+                                        </div>
+                                        
+                                        <div class="col-7">
+                                           <h6>Free project templates</h6>
+                                           <h6 class="text-muted"><small>
+                                            Confluence has hundreds 
+                                           </small></h6>
+                                        </div>
+                                    </article>
+                                    <article class="row mt-2">
+                                        <div class="col-4 mt-1 ">
+                                            <img  src="https://picsum.photos/id/3/80/80" alt="">
+                                        </div>
+                                        
+                                        <div class="col-7">
+                                           <h6>Free project templates</h6>
+                                           <h6 class="text-muted"><small>
+                                            Confluence has hundreds 
+                                           </small></h6>
+                                        </div>
+                                    </article>
+                                   
+                                </section>
+                            </div>
+
+
+                        </div>
+                      </div>
+
+                </div>
+                <hr>
+                <h5 class="text-muted small ml-2">
+                    Help - Status - Writers - Blog -  Careers 
+                </h5>
+                <h5 class="text-muted small ml-2">-  Privacy - Terms - About - Knowable</h5>
+            </div>
+           
+
+        </div>
+        <!--row end-->
+    </div>
+    <!--CONTAINER START-->
+
+    </div>
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<!--
+
+
+    <div class="row ">
+                                    <div class="col-sm-4 mt-1">
+                                        <img width="70px"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/5/58/Getir_logo.png"
+                                            alt="getir">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h6 class="mt-1"><strong>Getir A.Ş.</strong></h6>
+                                        <h6><a rel="stylesheet" href="getir.com"> <small
+                                                    class="text-muted">getir.com</small></h6>
+                                        <button type="button"
+                                            class="btn btn-outline-secondary rounded-pill">Follow</button>
+
+                                    </div>
+                                </div>
+-->
