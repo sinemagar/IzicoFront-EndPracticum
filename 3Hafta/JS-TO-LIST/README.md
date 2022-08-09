@@ -2,7 +2,7 @@
 My first Project only Boostrap
 
 ## Iyzico Practicum JS-HOMEWORK2 published site <br>
-https://instagramclonee.netlify.app/
+https://myyy-to-do-list.netlify.app/
 
 <br>
 ## Web
