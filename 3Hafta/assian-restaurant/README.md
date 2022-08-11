@@ -1,7 +1,12 @@
 # Assian Restaurant
-Using fetch
+Using fetch<br>
+Used lorem picsum for photos<br>
+json was pulled from the internet. Additionally there is data.json in the repo<br>
+json api was pulled from internet because the project was published
 
+<hr>
 ## Iyzico Practicum JS-HOMEWORK3 published site <br>
+https://assian.netlify.app/
 
 
 <br>
