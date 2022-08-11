@@ -1,0 +1,78 @@
+{
+    "categories": ["All", "Korea", "Japan", "China"],
+    "foods": [
+        {
+        "id": 1,
+        "name": "Tteokbokki",
+        "thumbnail": "https://picsum.photos/id/237/200/300",
+        "description": "Spicy rice cakes, serving with fish cake.",
+        "price": "10.99",
+        "category": "Korea"
+    },
+    {
+        "id": 2,
+        "name": "Chicken Ramen",
+        "thumbnail": "https://picsum.photos/id/52/200/300",
+        "description": "Chicken noodle soup, serving with vegetables such as soy bean, green onion. In an optional you can ask for egg.",
+        "price": "7.99",
+        "category": "Japan"
+    },
+    {
+        "id": 3,
+        "name": "Bibimbap",
+        "thumbnail": "https://picsum.photos/id/120/200/300",
+        "description": "Boiling vegetables, serving with special hot sauce.",
+        "price": "8.99",
+        "category": "Korea"
+    },
+    {
+        "id": 4,
+        "name": "Dan Dan Mian",
+        "thumbnail": "https://picsum.photos/id/200/200/300",
+        "description": "Dan dan noodle, serving with green onion",
+        "price": "5.99",
+        "category": "China"
+    },
+    {
+        "id": 5,
+        "name": "Yangzhou Fried Rice",
+        "thumbnail": "https://picsum.photos/id/157/200/300",
+        "description": "Yangzhou style fried rice, serving with bean and pickles",
+        "price": "12.99",
+        "category": "China"
+    },
+    {
+        "id": 6,
+        "name": "Onigiri",
+        "thumbnail": "https://picsum.photos/id/45/200/300",
+        "description": "Rice Sandwich, serving with soy sauce",
+        "price": "9.99",
+        "category": "Japan"
+    },
+    {
+        "id": 7,
+        "name": "Jajangmyeon",
+        "thumbnail": "https://picsum.photos/id/65/200/300",
+        "description": "Black bean sauce noodle, serving with green onion",
+        "price": "15.99",
+        "category": "Korea"
+    },
+    {
+        "id": 8,
+        "name": "Ma Yi Shang Shu",
+        "thumbnail": "https://picsum.photos/id/85/200/300",
+        "description": "Hot pepper sauce noodle, serving with soy bean and onion",
+        "price": "12.99",
+        "category": "China"
+    },
+    {
+        "id": 9,
+        "name": "Doroyaki",
+        "thumbnail": "https://picsum.photos/id/211/200/300",
+        "description": "Red bean paste dessert, serving with honey.",
+        "price": "3.99",
+        "category": "Japan"
+    }
+
+]
+}
