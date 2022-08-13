@@ -1,14 +1,22 @@
 # IzicoFront-EndPracticum
 Hi everyone, I will add my repos like HTML-CSS-JavaScript to this section during the Practicum period.
 
-## 1.WEEK 
+<hr>
+<b> 1.WEEK </b> <br> <hr>
 - [x] [HTML](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/1.Hafta/HTML)
 - [x] [Boostrap](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/1.Hafta/Boostrap)
 - [x] [CSS](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/1.Hafta/CSS/Odevler)
 
-## 2.WEEK<br><hr>
+<hr>
+<b> 2.WEEK </b> <br> <hr>
 - [x] [LinkedIn](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/2.Hafta/LinkedlnClone)<img src="https://i.hizliresim.com/at6z64d.PNG"> <br><hr>
 - [x] [Medium Clone](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/2.Hafta/MediumsClone)<img src="https://i.hizliresim.com/6oa3for.PNG"><br><hr>
 - [x] [Instagram Clone](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/2.Hafta/Instagrams-Clone)<img src="https://i.hizliresim.com/cjobxla.PNG"><br><hr>
 
+<hr>
+<b> 3.WEEK </b> <br> <hr>
+- [x] [ToDoList](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/3Hafta/JS-TO-LIST)<img src="https://i.hizliresim.com/fms83s6.PNG"> <br><hr>
+- [x] [AsianReastaurant](https://github.com/sinemagar/IzicoFront-EndPracticum/tree/main/3Hafta/assian-restaurant)<img src="https://i.hizliresim.com/9z6iwvf.PNG> <br><hr>
 
+<hr>
+<b></b>
