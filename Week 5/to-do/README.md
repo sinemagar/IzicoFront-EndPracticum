@@ -1,14 +1,19 @@
 # TODO APP WITH JS
 
-
 <hr>
-## Iyzico Practicum JS-HOMEWORK3 published site <br>
-https://assian.netlify.app/
+
+## Iyzico Practicum week5 homework1 published site <br>
 
 
 <br>
+
 ## Web
-<img src="https://i.hizliresim.com/9z6iwvf.PNG">
+<img src="https://i.hizliresim.com/bk69t65.PNG">
+<hr>
+
+## App
+<img src="https://i.hizliresim.com/2td6uww.PNG">
+
 <hr>
 
 ### Library | Used
