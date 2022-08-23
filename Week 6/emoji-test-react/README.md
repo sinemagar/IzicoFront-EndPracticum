@@ -16,7 +16,7 @@ Usage
 
 `npm start`
 
-`Used Technology`
+### Used Technology
 1. JavaScript
 2. React
 3. Testing-libraries
